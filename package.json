@@ -9,6 +9,7 @@
     "start": "node kaitt.js"
   },
   "dependencies": {
+    "audio": "^1.2.0",
     "ejs": "2.4.1",
     "express": "^4.14.0"
   },
