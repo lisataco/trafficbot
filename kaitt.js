@@ -29,8 +29,8 @@ kaitt.post('/',function(req,res){
 if (module === require.main) {
   // [START server]
   // Start the server
-  let server = kaitt.listen(process.env.PORT || 8080, function () {
-    let port = server.address().port;
+  var server = kaitt.listen(process.env.PORT || 8080, function () {
+    var port = server.address().port;
     console.log('KaittApp listening on port %s', port);
   });
 }
