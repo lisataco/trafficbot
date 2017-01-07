@@ -22,6 +22,8 @@ kaitt.post('/',function(req,res){
   	window.open("https://goo.gl/maps/NAYL5n2TRz12");
   	audio.play();
   }
+
+  assistant.handleRequest(musicMap);
 });
 
 if (module === require.main) {
