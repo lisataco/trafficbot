@@ -1,12 +1,12 @@
 process.env.DEBUG = 'actions-on-google:*';
-let Assistant = require('actions-on-google').ApiAiAssistant;
-let express = require('express');
-let bodyParser = require('body-parser');
+var Assistant = require('actions-on-google').ApiAiAssistant;
+var express = require('express');
+var bodyParser = require('body-parser');
 
-let kaitt = express();
+var kaitt = express();
 kaitt.use(bodyParser.json({type: 'application/json'}));
 
-let Audio = require('Audio');
+var Audio = require('Audio');
 var audio = new Audio("Knight_Right.mp3");
 
 kaitt.post('/',function(req,res){
