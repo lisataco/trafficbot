@@ -14,11 +14,13 @@ kaitt.post('/',function(req,res){
 	console.log('Request headers: ' + JSON.stringify(req.headers));
 	console.log('Request body: ' + JSON.stringify(req.body));
 
-	function responseHandler (assistant) {
-		window.open("https://goo.gl/maps/NAYL5n2TRz12");
-		audio.play();
-    	assistant.tell('911 alerted. All lights are green. On our way to the hospital.');
-  	assistant.handleRequest(responseHandler);
+	// function responseHandler (assistant) {
+ //    	assistant.tell('911 alerted. All lights are green. On our way to the hospital.');
+ //  	assistant.handleRequest(responseHandler);
+ //  }
+  function musicMap() {
+  	window.open("https://goo.gl/maps/NAYL5n2TRz12");
+  	audio.play();
   }
 });
 
