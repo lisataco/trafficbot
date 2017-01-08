@@ -33,7 +33,7 @@ kaitt.post('/',function(req,res){
   // audio.play();	
   }
   function Map() {
-  	kaitt.redirect('https://goo.gl/maps/NAYL5n2TRz12');
+  	res.redirect('https://goo.gl/maps/NAYL5n2TRz12');
   	//window.open("https://goo.gl/maps/NAYL5n2TRz12");
   	
   }
