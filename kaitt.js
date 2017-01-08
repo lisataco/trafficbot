@@ -29,9 +29,13 @@ kaitt.post('/',function(req,res){
  //  }
   
 
-  function musicMap() {
-  	window.open("https://goo.gl/maps/NAYL5n2TRz12");
-  	// audio.play();
+  function music() {
+  // audio.play();	
+  }
+  function Map() {
+  	kaitt.redirect('https://goo.gl/maps/NAYL5n2TRz12');
+  	//window.open("https://goo.gl/maps/NAYL5n2TRz12");
+  	
   }
 
   assistant.handleRequest(musicMap);
