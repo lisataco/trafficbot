@@ -23,7 +23,7 @@ kaitt.post('/',function(req,res){
 	const assistant = new Assistant({request: req, response: res});
 	console.log('Request headers: ' + JSON.stringify(req.headers));
 	console.log('Request body: ' + JSON.stringify(req.body));
-	
+	res.send({ testing: 'did you get this?' }
 	// function responseHandler (assistant) {
  //    	assistant.tell('911 alerted. All lights are green. On our way to the hospital.');
  //  	assistant.handleRequest(responseHandler);
@@ -35,7 +35,7 @@ kaitt.post('/',function(req,res){
   }
   
 
-  assistant.handleRequest('Done');
+  assistant.handleRequest();
 });
 
 if (module === require.main) {
