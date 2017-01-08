@@ -1,0 +1,11 @@
+language: cpp
+sudo: false
+addons:
+  apt:
+    packages:
+      - cmake
+script:
+  - make check
+branches:
+  only:
+    - gh-pages
