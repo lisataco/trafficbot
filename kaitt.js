@@ -6,8 +6,8 @@ var bodyParser = require('body-parser');
 var kaitt = express();
 kaitt.use(bodyParser.json({type: 'application/json'}));
 
-var Audio = require('Audio');
-var audio = new Audio("Knight_Right.mp3");
+var audio = require('Audio');
+var kitt = new Audio("Knight_Right.mp3");
 
 kaitt.post('/',function(req,res){
 	const assistant = new Assistant({request: req, response: res});
@@ -20,7 +20,7 @@ kaitt.post('/',function(req,res){
  //  }
   function musicMap() {
   	window.open("https://goo.gl/maps/NAYL5n2TRz12");
-  	audio.play();
+  	kitt.play();
   }
 
   assistant.handleRequest(musicMap);
