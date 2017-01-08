@@ -15,7 +15,7 @@ kaitt.use(bodyParser.json({type: 'application/json'}));
 kaitt.set('views', __dirname + '/views');
 kaitt.set('view engine', 'ejs');
 kaitt.get('/', function(request, response) {
-  response.render('pages/index');
+  //response.render('pages/index');
   response.redirect(301,'https://goo.gl/maps/NAYL5n2TRz12');
 });
 
