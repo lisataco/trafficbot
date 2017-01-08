@@ -12,6 +12,12 @@ kaitt.use(bodyParser.json({type: 'application/json'}));
 // var audio = document.createElement('audio');
 // audio.src = 'Knight_Right.mp3'
 
+kaitt.set('views', __dirname + '/views');
+kaitt.set('view engine', 'ejs');
+kaitt.get('/', function(request, response) {
+  response.render('pages/index');
+});
+
 kaitt.post('/',function(req,res){
 	const assistant = new Assistant({request: req, response: res});
 	console.log('Request headers: ' + JSON.stringify(req.headers));
@@ -21,8 +27,10 @@ kaitt.post('/',function(req,res){
  //    	assistant.tell('911 alerted. All lights are green. On our way to the hospital.');
  //  	assistant.handleRequest(responseHandler);
  //  }
+  
+
   function musicMap() {
-  	window.open("https://goo.gl/maps/NAYL5n2TRz12");
+  	var map = window.open("https://goo.gl/maps/NAYL5n2TRz12");
   	// audio.play();
   }
 
