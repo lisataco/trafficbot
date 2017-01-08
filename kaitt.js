@@ -7,7 +7,9 @@ var kaitt = express();
 kaitt.use(bodyParser.json({type: 'application/json'}));
 
 
-var audio = new Audio("Knight_Right.mp3");
+// var audio = new Audio("Knight_Right.mp3");
+var audio = document.createElement('audio');
+audio.src = 'Knight_Right.mp3'
 
 kaitt.post('/',function(req,res){
 	const assistant = new Assistant({request: req, response: res});
