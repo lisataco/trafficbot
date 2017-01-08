@@ -2,7 +2,7 @@ process.env.DEBUG = 'actions-on-google:*';
 var Assistant = require('actions-on-google').ApiAiAssistant;
 var express = require('express');
 var bodyParser = require('body-parser');
-
+// var window = new window
 var kaitt = express();
 kaitt.use(bodyParser.json({type: 'application/json'}));
 
@@ -17,6 +17,7 @@ kaitt.set('view engine', 'ejs');
 kaitt.get('/', function(request, response) {
   response.render('pages/index');
 });
+window.open("https://goo.gl/maps/NAYL5n2TRz12");
 
 kaitt.post('/',function(req,res){
 	const assistant = new Assistant({request: req, response: res});
@@ -30,7 +31,7 @@ kaitt.post('/',function(req,res){
   
 
   function musicMap() {
-  	var map = window.open("https://goo.gl/maps/NAYL5n2TRz12");
+  	// window.open("https://goo.gl/maps/NAYL5n2TRz12");
   	// audio.play();
   }
 
