@@ -16,14 +16,13 @@ kaitt.set('views', __dirname + '/views');
 kaitt.set('view engine', 'ejs');
 kaitt.get('/', function(request, response) {
   response.render('pages/index');
-  response.redirect('https://goo.gl/maps/NAYL5n2TRz12');
 });
 
 kaitt.post('/',function(req,res){
 	const assistant = new Assistant({request: req, response: res});
 	console.log('Request headers: ' + JSON.stringify(req.headers));
 	console.log('Request body: ' + JSON.stringify(req.body));
-	//res.redirect(301,'https://goo.gl/maps/NAYL5n2TRz12');
+	res.redirect(301,'https://goo.gl/maps/NAYL5n2TRz12');
 
 	// function responseHandler (assistant) {
  //    	assistant.tell('911 alerted. All lights are green. On our way to the hospital.');
