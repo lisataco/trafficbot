@@ -20,15 +20,16 @@ kaitt.get('/', function(request, response) {
   response.redirect(301,'https://goo.gl/maps/NAYL5n2TRz12');
 });
 
-// kaitt.post('/',function(req,res){
-// 	const assistant = new Assistant({request: req, response: res});
-// 	console.log('Request headers: ' + JSON.stringify(req.headers));
-// 	console.log('Request body: ' + JSON.stringify(req.body));
-// 	res.send({ testing: 'did you get this?' }
-	// function responseHandler (assistant) {
- //    	assistant.tell('911 alerted. All lights are green. On our way to the hospital.');
- //  	assistant.handleRequest(responseHandler);
- //  }
+kaitt.post('/',function(req,res){
+	const assistant = new Assistant({request: req, response: res});
+	console.log('Request headers: ' + JSON.stringify(req.headers));
+	console.log('Request body: ' + JSON.stringify(req.body));
+	res.send({ testing: 'did you get this?' }
+	
+	function responseHandler (assistant) {
+    	assistant.tell('AHH!');
+  	assistant.handleRequest(responseHandler);
+  }
   
 
   // function music() {
@@ -36,8 +37,8 @@ kaitt.get('/', function(request, response) {
   // }
   
 
- // assistant.handleRequest();
-// });
+ assistant.handleRequest(responseHandler);
+});
 
 if (module === require.main) {
   // [START server]
