@@ -6,11 +6,10 @@
     "node": "5.9.1"
   },
   "scripts": {
-    "start": "node kaitt.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "actions-on-google": "^1.0.4",
-    "audio": "^1.2.0",
     "body-parser": "^1.15.2",
     "ejs": "2.4.1",
     "express": "^4.14.0",
@@ -20,12 +19,14 @@
     "type": "git",
     "url": "git+https://git.heroku.com/kaitt.git"
   },
-  "main": "kaitt.js",
+  "main": "app.js",
   "devDependencies": {
     "semistandard": "^9.2.1"
   },
   "keywords": [
-    "kaitt"
+    "kaitt",
+    "emergency",
+    "AI"
   ],
   "author": "Helix",
   "license": "MIT"
