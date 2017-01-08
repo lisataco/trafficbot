@@ -17,7 +17,6 @@ kaitt.set('view engine', 'ejs');
 kaitt.get('/', function(request, response) {
   response.render('pages/index');
 });
-window.open("https://goo.gl/maps/NAYL5n2TRz12");
 
 kaitt.post('/',function(req,res){
 	const assistant = new Assistant({request: req, response: res});
@@ -31,7 +30,7 @@ kaitt.post('/',function(req,res){
   
 
   function musicMap() {
-  	// window.open("https://goo.gl/maps/NAYL5n2TRz12");
+  	window.open("https://goo.gl/maps/NAYL5n2TRz12");
   	// audio.play();
   }
 
