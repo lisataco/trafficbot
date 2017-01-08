@@ -12,11 +12,11 @@ kaitt.use(bodyParser.json({type: 'application/json'}));
 // var audio = document.createElement('audio');
 // audio.src = 'Knight_Right.mp3'
 
-// kaitt.set('views', __dirname + '/views');
-// kaitt.set('view engine', 'ejs');
-// kaitt.get('/', function(request, response) {
-//   response.render('pages/index');
-// });
+kaitt.set('views', __dirname + '/views');
+kaitt.set('view engine', 'ejs');
+kaitt.get('/', function(request, response) {
+  response.render('pages/index');
+});
 
 kaitt.post('/',function(req,res){
 	const assistant = new Assistant({request: req, response: res});
