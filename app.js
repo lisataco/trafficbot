@@ -23,6 +23,7 @@ const myEmitter = new MyEmitter();
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+//app.use(express.static(__dirname + '/views'));
 
 // [START YourAction]
 
