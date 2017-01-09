@@ -96,15 +96,15 @@ if (module === require.main) {
   	});
   });
 
-  let soundID = "Knight_Rider"; 
+  // let soundID = "Knight_Rider"; 
   
-  function loadSound () {
-  	createjs.Sound.registerSound("./Knight_Rider.mp3",soundID)
-  }
+//   function loadSound () {
+//   	createjs.Sound.registerSound("./Knight_Rider.mp3",soundID)
+//   }
 
-  function playSound () {
-  	createjs.Sound.play(soundID);
-}
+//   function playSound () {
+//   	createjs.Sound.play(soundID);
+// }
 
   // [END server]
 }
