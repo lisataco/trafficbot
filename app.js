@@ -17,10 +17,22 @@ app.get('/',(req,res) =>{
 	//res.status(200).send('Welcome! This is your Autonomous Vehicle - K.AI.T.T.');
 	//res.render('pages/index');
 	res.redirect(301,'https://goo.gl/maps/NAYL5n2TRz12');
-	res.send({ testing: 'did you get this?' })
 });
 
-app.post('/', function (req, res) {
+function respondSuccessfully(res) {
+    let webhookResponse = {
+        speech: "911 approved. The path is cleared for you. We're on our way to the hospital.",
+        displayText: "911 approved. The path is cleared for you. We're on our way to the hospital.",
+        data: {},
+        contextOut: [],
+        source: 'kaitt'
+    };
+
+    res.set('Content-Type', 'application/json');
+    res.send(webhookResponse);
+}
+
+app.post('/webhook', function (req, res) {
   const assistant = new Assistant({request: req, response: res});
   console.log('Request headers: ' + JSON.stringify(req.headers));
   console.log('Request body: ' + JSON.stringify(req.body));
@@ -32,6 +44,8 @@ app.post('/', function (req, res) {
   }
 
   assistant.handleRequest(responseHandler);
+
+  // respondSuccessfully(res);
 });
 
 
@@ -49,6 +63,9 @@ if (module === require.main) {
 }
 
 //module.exports = app;
+
+
+
 
 
 
