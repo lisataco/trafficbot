@@ -36,18 +36,19 @@ app.get('/map',(req,res) =>{
 	res.redirect(301,'https://goo.gl/maps/NAYL5n2TRz12');
 });
 
+window.open();
 // function redirectToMap(res, url) {
 // 	res.redirect(301, url);
 // }
 
-// function respondSuccessfully(res) {
-//     let webhookResponse = {
-//         speech: "911 approved. The path is cleared for you. We're on our way to the hospital.",
-//         displayText: "911 approved. The path is cleared for you. We're on our way to the hospital.",
-//         data: {},
-//         contextOut: [],
-//         source: 'kaitt'
-//     };
+function respondSuccessfully(res) {
+    let webhookResponse = {
+        speech: "911 approved. The path is cleared for you. We're on our way to the hospital.",
+        displayText: "911 approved. The path is cleared for you. We're on our way to the hospital.",
+        data: {},
+        contextOut: [],
+        source: 'kaitt'
+    };
 
     res.set('Content-Type', 'application/json');
     res.send(webhookResponse);
