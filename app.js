@@ -38,8 +38,8 @@ app.get('/home',(req,res) =>{
 
 app.get('/map',(req,res) =>{
 	// res.status(200).send('Welcome! This is your Autonomous Vehicle - K.AI.T.T.');
-	//res.redirect(301,'https://goo.gl/maps/NAYL5n2TRz12');
-	res.render('pages/map');
+	res.redirect(301,'https://goo.gl/maps/NAYL5n2TRz12');
+	// res.render('pages/map');
 });
 
 // window.open();
