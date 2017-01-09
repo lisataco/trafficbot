@@ -36,7 +36,7 @@ app.get('/map',(req,res) =>{
 	res.redirect(301,'https://goo.gl/maps/NAYL5n2TRz12');
 });
 
-window.open();
+// window.open();
 // function redirectToMap(res, url) {
 // 	res.redirect(301, url);
 // }
