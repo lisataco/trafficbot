@@ -31,6 +31,10 @@ app.get('/home',(req,res) =>{
 	res.render('pages/index');
 });
 
+app.get('/sound',(req,res) =>{
+	res.render('pages/sound');
+}
+
 app.get('/map',(req,res) =>{
 	// res.status(200).send('Welcome! This is your Autonomous Vehicle - K.AI.T.T.');
 	res.redirect(301,'https://goo.gl/maps/NAYL5n2TRz12');
@@ -90,7 +94,14 @@ if (module === require.main) {
   	myEmitter.on('redirect-prompt', function(msg) {
   		io.emit('redirect-to-map');
   	});
-  }); 
+  });
+
+  let soundID = "Knight_Rider"; 
+  
+  function loadSound () {
+  	createjs.Sound.registerSound("./Knight_Rider.mp3",soundID)
+  }
+
   // [END server]
 }
 
