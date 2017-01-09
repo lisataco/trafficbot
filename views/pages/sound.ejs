@@ -15,16 +15,21 @@
 //   // window.location.href = '/map';
 // });
 
-</SCRIPT>
+let soundID = "Knight_Rider"; 
+function loadAndPlaySound () {
+  	createjs.Sound.registerSound("./Knight_Rider.mp3",soundID);
+		createjs.Sound.play(soundID);
+  }
+</script>
 
 <!-- <link href='/kstyle.css' rel='stylesheet' type='text/css'> -->
 
 </HEAD>
-<body>
+<body onload="loadAndPlaySound();">
 <iframe width="600" height="450" frameborder="0" style="border:0"
 src="https://goo.gl/maps/NAYL5n2TRz12" allowfullscreen></iframe>
 
-<!-- <body onload="loadSound();">
+<!-- <body onload="loadAndPlaySound();">
  <h1>K.AI.T.T. Emergency Activated</h1>
  <button onclick="playSound();" class="playSound">Play Sound</button> -->
 </body>
