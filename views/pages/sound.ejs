@@ -15,10 +15,14 @@
 //   // window.location.href = '/map';
 // });
 
-let soundID = "Knight_Rider"; 
+let soundID = "rider"; 
 function loadAndPlaySound () {
-  	createjs.Sound.registerSound("assets/Knight_Rider.mp3",soundID);
-	createjs.Sound.play(soundID);
+  	createjs.Sound.registerSound("assets/rider.mp3",soundID);
+
+  	setTimeout(function() {
+  		createjs.Sound.play(soundID);
+  	}, 1000);
+	
   }
 </script>
 
@@ -27,7 +31,7 @@ function loadAndPlaySound () {
 </HEAD>
 <body onload="loadAndPlaySound();">
 <iframe width="600" height="450" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyBzyIRULxC_djz_KWQZyPqCa4nDTVt9KTI&origin=42.3671418,-71.1023466,16z&destination=Massachusetts+General+Hospital" allowfullscreen></iframe>
+src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyBzyIRULxC_djz_KWQZyPqCa4nDTVt9KTI&origin=80+Prospect+Street,+Cambridge,+MA&destination=Massachusetts+General+Hospital" allowfullscreen></iframe>
 
 <!-- <body onload="loadAndPlaySound();">
  <h1>K.AI.T.T. Emergency Activated</h1>
