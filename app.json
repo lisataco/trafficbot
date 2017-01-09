@@ -1,5 +1,5 @@
 {
-  "name": "Start on Heroku: kaitt.js",
+  "name": "Start on Heroku: app.js",
   "description": "A test App.js app using Express 4",
   "repository": "https://git.heroku.com/kaitt.git",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
