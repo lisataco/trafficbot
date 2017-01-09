@@ -11,6 +11,7 @@
   "dependencies": {
     "actions-on-google": "^1.0.4",
     "body-parser": "^1.15.2",
+    "createjs": "0.0.1",
     "ejs": "2.4.1",
     "express": "^4.14.0",
     "semistandard": "^9.2.1",
